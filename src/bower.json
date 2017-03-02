@@ -1,0 +1,22 @@
+{
+  "name": "math",
+  "authors": [
+    "Al Lamarre <alamarre@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "AGPL v3.0",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "jquery-ui": "^1.12.0",
+    "bootstrap": "^3.3.7"
+  }
+}
