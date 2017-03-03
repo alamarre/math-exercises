@@ -11,7 +11,7 @@ module.exports = React.createClass({
       }
     },
     render: function(element,container) {
-      var total = this.props.configuration.numberOfQuestions;
+      var total = this.props.material.configuration.numberOfQuestions;
 			if(this.state.answered == total) {
 				return <div>You got {this.state.correct} right out of {total} questions</div>
 			}
