@@ -1,7 +1,7 @@
 {
 	"grades": {
 		0: [],
-		1: [{"name": "Word to Number",  "source":"WordToNumber", "type": "multiple choice"}],
+		1: [{"name": "Word to Number",  "source":"WordToNumber", "type": "multiple choice", "mode":"BestOfN", "configuration": {"numberOfQuestions": 10}}],
 		2: [],
 		3: [],
 		4: [],

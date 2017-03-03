@@ -6,6 +6,7 @@ var material = require("./material.json");
 
 function notCalled() {
   require('./material/**/*.js', { glob: true });
+  require('./gamemodes/**/*.js', { glob: true });
 }
 
 module.exports = React.createClass({
@@ -29,7 +30,10 @@ module.exports = React.createClass({
 
       if (this.state.material != null && typeof activities[this.state.material] != null) {
         var problemGenerator = require("./material/grades/"+grade+"/"+this.state.material.source+".js");
-        renderer = React.createElement(activities[this.state.material.type], {material: this.state.material, problemGenerator: problemGenerator , grade: grade});
+        var gameMode = require("./gamemodes/"+this.state.material.mode+".js");
+        //var activity = React.createElement(activities[this.state.material.type], {material: this.state.material, problemGenerator: problemGenerator , grade: grade});
+        var modeElement = React.createElement(gameMode, {configuration: this.state.material.configuration, questionRenderer: activities[this.state.material.type], material: this.state.material, problemGenerator: problemGenerator , grade: grade});
+        renderer = modeElement;
       }
       else {
         var cells = [];

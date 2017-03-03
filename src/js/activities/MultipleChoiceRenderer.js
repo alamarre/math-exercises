@@ -7,10 +7,19 @@ module.exports = React.createClass({
         return {"problem": problem, "choices": this.createShuffledAnswer(problem)};
     },
 		selectAnswer: function(answer) {
-			if(answer == this.state.problem.answer) {
-				var problem = this.props.problemGenerator.generateMultipleChoiceProblem(5);
-				this.setState({"problem": problem, "choices": this.createShuffledAnswer(problem)}, function(){});
+			if(this.props.listenerFunction) {
+				this.props.listenerFunction(answer == this.state.problem.answer);
+				this.nextQuestion();
+				return;
 			}
+
+			if(answer == this.state.problem.answer) {
+					this.nextQuestion();
+			}
+		},
+		nextQuestion: function() {
+			var problem = this.props.problemGenerator.generateMultipleChoiceProblem(5);
+			this.setState({"problem": problem, "choices": this.createShuffledAnswer(problem)}, function(){});
 		},
 		createShuffledAnswer: function(problem) {
 			var answers = [];
