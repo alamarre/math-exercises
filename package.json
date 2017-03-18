@@ -1,16 +1,15 @@
 {
   "name": "ontario-math",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web based math exercises",
   "main": "index.js",
   "scripts": {
     "devrun": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --progress --colors",
-    "watch": "./node_modules/.bin/webpack --config webpack.config.js --progress --colors --watch",
+    "watch": "./node_modules/.bin/webpack --config webpack.config.js --progress --colors --watch"
   },
   "author": "Al Lamarre",
-  "license": "AGPL v3.0",
+  "license": "AGPL-3.0",
   "dependencies": {
-    "babel-preset-react": "^6.11.1",
     "babelify": "^7.3.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
@@ -23,6 +22,7 @@
     "babel-preset-react": "^6.23.0",
     "html-webpack-plugin": "^2.28.0",
     "json-loader": "^0.5.4",
+    "lodash": "^4.17.4",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
   }

@@ -12,7 +12,7 @@ module.exports = {
   entry: APP_DIR + "/app.js",
   output: {
     path: BUILD_DIR,
-    filename: "app.js"
+    filename: "/app.js"
   },
   module : {
     rules: [
