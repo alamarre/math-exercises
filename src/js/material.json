@@ -1,14 +1,11 @@
 {
 	"grades": {
-		"0": [],
-		"1": [{"name": "Word to Number",  "source":"WordToNumber", "type": "multiple choice", "mode":"BestOfN", "configuration": {"numberOfQuestions": 10}}],
-		"2": [],
-		"3": [],
-		"4": [],
-		"5": [],
-		"6": [],
-		"7": [],
-		"8": [],
-		"9": []
+		"1": {"image":"numbers/1.svg", 
+			"exercises" : [
+				{"name": "Word to Number",  "source":"WordToNumber", "type": "multiple choice", "mode":"BestOfN", "configuration": {"numberOfQuestions": 10}},
+				{"name": "Addition",  "source":"Addition", "type": "multiple choice", "mode":"BestOfN", "configuration": {"numberOfQuestions": 10}},
+				{"name": "Subtraction",  "source":"Subtraction", "type": "multiple choice", "mode":"BestOfN", "configuration": {"numberOfQuestions": 10}}		
+				] 
+		}
 	}
 }

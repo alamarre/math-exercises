@@ -1,6 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, Link, browserHistory } from 'react-router'
+import { Router, Route, Link, hashHistory } from 'react-router'
+
+require("./style.scss");
 
 var GradeSelector = require("./GradeSelector");
 var MaterialSelector = require("./MaterialSelector");
@@ -13,7 +15,7 @@ div.setAttribute("id", "app");
 document.body.appendChild(div);
 
 render((
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path="/" component={GradeSelector}>
       <Route path="grades">
         <Route path=":grade" component={MaterialSelector}>

@@ -9,7 +9,7 @@ const MaterialSelector = React.createClass({
   render() {
       var grade = this.props.params.grade;
       var links = [];
-      var gradeData = material.grades[grade];
+      var gradeData = material.grades[grade].exercises;
 
       for(var i=0; i<gradeData.length; i++) {
           var gradeRef = "/exercises/"+grade+"/"+i;

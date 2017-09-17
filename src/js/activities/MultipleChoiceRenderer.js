@@ -51,7 +51,7 @@ module.exports = React.createClass({
 			var cells = [];
 			for(var i=0; i< this.state.choices.length; i++) {
 				var current = this.state.choices[i];
-				cells.push(<div onClick={this.selectAnswer.bind(this, current)} key={'answer' +i}>{current}</div>);
+				cells.push(<div className="multiple-choice-answer" onClick={this.selectAnswer.bind(this, current)} key={'answer' +i}>{current}</div>);
 			}
 			var renderer = <div>{cells}</div>;
 

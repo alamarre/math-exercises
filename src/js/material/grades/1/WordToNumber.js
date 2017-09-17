@@ -48,7 +48,7 @@ return special[number];
 }
 
 function generateProblem() {
-	var expectedValue = Number.randomNumber(1, 100);
+	var expectedValue = Number.randomNumber(1, 10);
 	return {question: getNameForNumber(expectedValue), answer: expectedValue};
 }
 
@@ -60,7 +60,7 @@ module.exports.generateMultipleChoiceProblem = function(count) {
 	var problem = generateProblem();
 	for(var i=0; i < count; i++) {
 		while(true) {
-			var current = Number.randomNumber(1, 100);
+			var current = Number.randomNumber(1, 10);
 			if(current != problem.answer && !otherAnswers.includes(current)) {
 				otherAnswers.push(current);
 				break;

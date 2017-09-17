@@ -10,12 +10,16 @@ const GradeSelector = React.createClass({
       var links = [];
       for(var grade in material.grades) {
           var gradeRef = "/grades/"+grade;
-          links.push(<div key={gradeRef}>
-              <Link to={gradeRef} >Grade {grade}</Link> 
+          var image = require("svg-url-loader?limit=1024!../images/"+material.grades[grade].image);
+          links.push(<div className="grade-selector" key={gradeRef}>
+              <Link to={gradeRef} ><img width="100px" src={image} /></Link> 
               </div>)
       }
 
-      var body = this.props.children || <div>{links}</div>;
+      var body = this.props.children || <div>
+          <h1>Select a Grade</h1>
+        {links}
+      </div>;
     return (
         <div>{body}</div>
     )
